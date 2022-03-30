@@ -26,23 +26,22 @@ print("COMPUTER CHOICE:", c)
 # DETERMINATION OF WINNER
 #
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+def winnerDetermination(computer,user):
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+    if user == computer:
+        print("It's a tie!")
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    elif user == "rock" and computer == "paper":
+        print("The computer wins")
+    elif user == "rock" and computer == "scissors":
+        print("The user wins")
+
+    elif user == "paper" and computer == "rock":
+        print("The user wins")
+    elif user == "paper" and computer == "scissors":
+        print("The computer wins")
+
+    elif user == "scissors" and computer == "rock":
+        print("The computer wins")
+    elif user == "scissors" and computer == "paper":
+        print("The user wins")
