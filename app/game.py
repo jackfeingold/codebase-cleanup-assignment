@@ -26,27 +26,38 @@ print("COMPUTER CHOICE:", c)
 # DETERMINATION OF WINNER
 #
 
-#
-# continue to simplify logic
-#
+
 def winnerDetermination(computer,user):
 
+    win = None
     if user == computer:
         print("It's a tie!")
+    elif ((user == "rock" and computer == "scissors") or 
+        (user == "paper" and computer == "rock") or 
+        (user == "scissors" and computer == "paper")):
+        win = True
+    else:
+        win = False
 
-    elif user == "rock" and computer == "paper":
-        print("The computer wins")
-    elif user == "rock" and computer == "scissors":
-        print("The user wins")
+    if win == True:
+        print("The user wins!")
+    elif win == False:
+        print("The computer wins.")
 
-    elif user == "paper" and computer == "rock":
-        print("The user wins")
-    elif user == "paper" and computer == "scissors":
-        print("The computer wins")
 
-    elif user == "scissors" and computer == "rock":
-        print("The computer wins")
-    elif user == "scissors" and computer == "paper":
-        print("The user wins")
+    #elif user == "rock" and computer == "paper":
+    #    print("The computer wins")
+    #elif user == "rock" and computer == "scissors":
+    #    print("The user wins")
+#
+    #elif user == "paper" and computer == "rock":
+    #    print("The user wins")
+    #elif user == "paper" and computer == "scissors":
+    #    print("The computer wins")
+#
+    #elif user == "scissors" and computer == "rock":
+    #    print("The computer wins")
+    #elif user == "scissors" and computer == "paper":
+    #    print("The user wins")
 
 winnerDetermination(c,u)
