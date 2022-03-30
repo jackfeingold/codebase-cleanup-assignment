@@ -26,6 +26,9 @@ print("COMPUTER CHOICE:", c)
 # DETERMINATION OF WINNER
 #
 
+#
+# continue to simplify logic
+#
 def winnerDetermination(computer,user):
 
     if user == computer:
