@@ -26,7 +26,7 @@ print("COMPUTER CHOICE:", c)
 # DETERMINATION OF WINNER
 #
 
-
+# function to determine winner of game
 def winnerDetermination(computer,user):
 
     win = None
