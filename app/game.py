@@ -44,20 +44,4 @@ def winnerDetermination(computer,user):
     elif win == False:
         print("The computer wins.")
 
-
-    #elif user == "rock" and computer == "paper":
-    #    print("The computer wins")
-    #elif user == "rock" and computer == "scissors":
-    #    print("The user wins")
-#
-    #elif user == "paper" and computer == "rock":
-    #    print("The user wins")
-    #elif user == "paper" and computer == "scissors":
-    #    print("The computer wins")
-#
-    #elif user == "scissors" and computer == "rock":
-    #    print("The computer wins")
-    #elif user == "scissors" and computer == "paper":
-    #    print("The user wins")
-
 winnerDetermination(c,u)
