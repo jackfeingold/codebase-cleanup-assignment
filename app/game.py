@@ -45,3 +45,5 @@ def winnerDetermination(computer,user):
         print("The computer wins")
     elif user == "scissors" and computer == "paper":
         print("The user wins")
+
+winnerDetermination(c,u)
