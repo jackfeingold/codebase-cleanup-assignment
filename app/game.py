@@ -4,13 +4,14 @@
 
 from random import choice
 
-#
+choices = ["rock", "paper", "scissors"]
+
 # USER SELECTION
 #
 
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
-if u not in ["rock", "paper", "scissors"]:
+if u not in choices:
     print("OOPS, TRY AGAIN")
     exit()
 
@@ -18,30 +19,29 @@ if u not in ["rock", "paper", "scissors"]:
 # COMPUTER SELECTION
 #
 
-c = choice(["rock", "paper", "scissors"])
+c = choice(choices)
 print("COMPUTER CHOICE:", c)
 
 #
 # DETERMINATION OF WINNER
 #
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+def winnerDetermination(computer,user):
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    win = None
+    if user == computer:
+        print("It's a tie!")
+    elif ((user == "rock" and computer == "scissors") or 
+        (user == "paper" and computer == "rock") or 
+        (user == "scissors" and computer == "paper")):
+        win = True
+    else:
+        win = False
+
+    if win == True:
+        print("The user wins!")
+    elif win == False:
+        print("The computer wins.")
+
+winnerDetermination(c,u)
